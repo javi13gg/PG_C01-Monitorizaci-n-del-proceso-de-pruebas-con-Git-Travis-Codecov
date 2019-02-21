@@ -44,6 +44,8 @@ public class ReusablePoolTest {
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#acquireReusable()}.
+	 *
+	 * Este test comprueba que el método AcquireReusable devuelve una instancia de tipo Reusable.
 	 */
 	@Test
 	public void testAcquireReusable() {
