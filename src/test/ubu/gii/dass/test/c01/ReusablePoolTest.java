@@ -34,7 +34,10 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		ReusablePool rp1 = ReusablePool.getInstance();
+		ReusablePool rp2 = ReusablePool.getInstance();
+		assertEquals("Test para la clase Singleton", rp1, rp2);
+	}
 	}
 
 	/**
