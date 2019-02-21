@@ -45,7 +45,16 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+		ReusablePool rp = ReusablePool.getInstance();
+		boolean control = true;
+		while (control) {
+			try {
+				assertTrue("Se comprueba que la instancia que se devuelve sea de tipo Reusable.",
+						rp.acquireReusable() instanceof Reusable);
+			} catch (NotFreeInstanceException e) {
+				control = false;
+			}
+		}
 	}
 
 	/**
