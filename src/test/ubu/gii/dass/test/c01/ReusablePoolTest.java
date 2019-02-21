@@ -31,6 +31,8 @@ public class ReusablePoolTest {
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#getInstance()}.
+	 *
+	 * Se comprueba que el método con el patrón Singleton funciona correctamente.
 	 */
 	@Test
 	public void testGetInstance() {
