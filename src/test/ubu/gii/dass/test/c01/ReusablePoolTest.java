@@ -63,10 +63,26 @@ public class ReusablePoolTest {
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 *
+	 * Test para comprobar la función ReleaseReusable
 	 */
 	@Test
 	public void testReleaseReusable() {
-		fail("Not yet implemented");
+		boolean thrown = false;
+		ReusablePool rp = ReusablePool.getInstance();
+		Reusable r1 = new Reusable();
+		Reusable r2 = r1;
+
+		assertTrue("Se comprueba si efectivamente los objetos son el mismo objeto.", r1.equals(r2));
+
+		try {
+			rp.releaseReusable(r1);
+			rp.releaseReusable(r2);
+		} catch (DuplicatedInstanceException e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+	}
 	}
 
 }
